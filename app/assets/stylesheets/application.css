@@ -14,11 +14,10 @@
  *= require_self
  */
  
-/*header + genre*/
+/*common*/
 
 .header {
   height:130px;
-  border-bottom:solid;
 }
 
 .header h1{
@@ -30,8 +29,8 @@
 .header li{
   list-style:none;
   float:left;
-  padding:30px;
-
+  padding:40px;
+  font-size:20px;
 }
 
 .header a{
@@ -44,16 +43,20 @@
 
 .genre{
   height:70px;
+  width:1400px;
   overflow: auto;
   white-space: nowrap;
   border-bottom:solid;
+  border-top:solid;
 }
 
 .genre th{
   padding:20px 30px;
 }
 
-/*footer*/
+.main{
+  height:1000px;
+}
 
 .footer{
   height:130px;
@@ -66,11 +69,73 @@
   padding:30px;
 }
 
+.footer a{
+  color:#000;
+}
+
 /*top*/
 
-.theme_image{
-  height:20px;
-  width:20px;
-  
+.theme_box{
+  height:200px;
+}
+
+img{
+  width:200px;
+  height:200px;
   float:left;
+  padding:30px;
+}
+
+.theme_box h2{
+  padding:20px;
+}
+
+.theme_box a{
+  
+  color:#000;
+}
+
+.options{
+  margin-top:30px;
+}
+
+.options li{
+  float:left;
+  margin:10px;
+  padding:10px;
+  list-style:none;
+  color:#000;
+}
+
+/*sample*/
+
+.theme h1{
+  text-align:center;
+  margin:20px;
+}
+
+.vote{
+  height:100px;
+}
+
+.vote ul{
+  float:right;
+}
+
+.vote li{
+  list-style:none;
+  float:left;
+  padding:20px;
+  
+}
+
+.opinion{
+  height:300px;
+}
+
+.option_box{
+  float:left;
+  border-left:solid 1px #808080;
+  
+  width:450px;
 }

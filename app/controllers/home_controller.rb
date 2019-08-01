@@ -1,8 +1,14 @@
 class HomeController < ApplicationController
   def top
+    @themes = Theme.all
   end
+  
   def about
-  end  
+  end 
+  
   def how_to_use
-  end  
+  end
+  
+  def sample_contribution
+  end 
 end

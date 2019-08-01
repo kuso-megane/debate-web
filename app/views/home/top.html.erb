@@ -1,4 +1,11 @@
- <div class="theme">
-   <div class="theme_image"><img src="https://images.pexels.com/photos/265730/pexels-photo-265730.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500"></div>
- </div>
- 
+<% @themes.each do |theme| %>
+  <div class="theme_box">
+    <div class="theme_image"><img src="/rings-2634929_640.png"></div>
+    <h2><a href="/sample_contribution"><%= theme.content %> </a></h2>
+    <div class="options align-bottom">
+      <li><button type="button" class="btn btn-danger">賛成</button></li>
+      <li><button type="button" class="btn btn-primary">反対</button></li>
+      <li><button type="button" class="btn btn-success">その他</button></li>
+    </div>
+  </div>
+<% end %> 
