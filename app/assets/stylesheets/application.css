@@ -17,17 +17,19 @@
 /*header*/
 
 .header{
-  height:200px;
+  height:130px;
 }
 
 .header h1{
   float:left; 
+  padding:30px;
 }
 
 .header li{
   list-style:none;
   float:left;
-  padding:20px;
+  padding:30px;
+  color:#000;
 }
 
 .header ul{
