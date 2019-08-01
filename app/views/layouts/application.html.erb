@@ -24,11 +24,13 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     
-    <div class="header bg-info">
+    <div class="header">
       <h1>Democracy!</h1>
       <ul>
-        <li><a href="/about">概要</a></li>
-        <li><a href="/how_to_use">使い方</a></li>
+        <li><a href="/">Top</a></li>
+        <li><a href="">MyPage</a></li>
+        <li><a href="/about" class="h-100 w-100">概要</a></li>
+        <li><a href="/how_to_use" class="h-100 w-100">使い方</a></li>
         <li>
           <div class="input-group">
 	          <input type="text" class="form-control" placeholder="キーワード検索">
@@ -39,7 +41,25 @@
         </li>
       </ul>
     </div>
+    <div class="genre bg-muted">
+     <table>
+       <tr>
+         <th><a href="">#政治・経済</a></th>   
+         <th><a href="">#教育</a></th> 
+         <th><a href="">#哲学</a></th> 
+         <th><a href="">#日常</a></th> 
+         <th><a href="">#趣味</a></th>  
+         <th><a href=""></a></th>
+       </tr>
+     </table>
+    </div>
     <%= yield %>
+    <div class="footer bg-info">
+      <ul>
+        <li><a href="">利用規約</a></li>
+        <li></li>
+      </ul>
+    </div>
   </body>
 </html>
 
