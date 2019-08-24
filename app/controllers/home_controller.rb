@@ -9,6 +9,4 @@ class HomeController < ApplicationController
   def how_to_use
   end
   
-  def sample_contribution
-  end 
 end
