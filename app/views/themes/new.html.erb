@@ -1,0 +1,14 @@
+<h1>新しいテーマ</h1>
+<%= form_with model: @theme do |f| %>
+  <p>
+    <%= f.label :content, "テーマ" %><br>
+    <%= f.text_field :content %>
+  </p>
+ 
+ <!-- ここに写真貼り付け機能つける -->
+ 
+ 
+  <p>
+    <%= f.submit "投稿！" %>
+  </p>
+<% end %>
