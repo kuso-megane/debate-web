@@ -5,9 +5,11 @@
     <%= f.text_field :content %>
   </p>
  
- <!-- ここに写真貼り付け機能つける -->
- 
- 
+  <p>
+    <%= f.label :image, "添付画像" %><br>
+    <%= f.file_field :image %>
+  </p>
+  
   <p>
     <%= f.submit "投稿！" %>
   </p>

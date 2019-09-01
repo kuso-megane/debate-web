@@ -1,6 +1,12 @@
 <% @themes.each do |theme| %>
   <div class="theme_box">
-    <div class="theme_image"><img src="/rings-2634929_640.png"></div>
+    <div class="theme_image">
+      <% if theme.image.attached? %>
+        <%= image_tag theme.image %>
+      <% else %>
+        <img src="/rings-2634929_640.png">
+      <% end %>
+    </div>
     <h2><%= link_to theme.content, sample_contribution_path %></h2>
     <div class="options align-bottom">
       <li><button type="button" class="btn btn-danger">賛成</button></li>
