@@ -7,7 +7,8 @@
         <img src="/rings-2634929_640.png">
       <% end %>
     </div>
-    <h2><%= link_to theme.content, sample_contribution_path %></h2>
+    <!--ここでtheme.contentをopinion.indexに渡したい   -->
+    <h2><%= link_to theme.content, theme_opinions_path(theme.id) %></h2>
     <div class="options align-bottom">
       <li><button type="button" class="btn btn-danger">賛成</button></li>
       <li><button type="button" class="btn btn-primary">反対</button></li>

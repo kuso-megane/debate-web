@@ -1,7 +1,9 @@
 Rails.application.routes.draw do
   
-  resources :themes
-  
+  devise_for :users
+  resources :themes do
+    resources :opinions
+  end
   root to: 'themes#index'
   get '/how_to_use' => 'home#how_to_use'
   get '/about' => 'home#about'

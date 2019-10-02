@@ -1,0 +1,21 @@
+<% if user_signed_in? %>
+  <h1>あなたの意見</h1>
+  <%= form_with model: @opinion, url: theme_opinions_path do |f| %>
+    <p>
+      <%= f.label :position, "あなたの立場" %><br>
+      <%= f.select :position, Opinion.positions.to_a %>
+    </p>
+   
+    <p>
+      <%= f.label :content, "意見" %><br>
+      <%= f.text_area :content %>
+    </p>
+    
+    
+    <p>
+      <%= f.submit "投稿！" %>
+    </p>
+  <% end %>
+<% else %>
+  <h1>テーマ投稿にはログインが必要です</h1>
+<% end %>  
