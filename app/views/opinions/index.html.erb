@@ -3,9 +3,36 @@
 </div>
 <div class="vote">
   <ul>
-    <li><button type="button" class="btn btn-danger">賛成</button></li>
-    <li><button type="button" class="btn btn-primary">反対</button></li>
-    <li><button type="button" class="btn btn-success">その他</button></li>
+    <li>
+      <p><%= @agree_count %></p>
+      <% if @user_position.present? && @user_position.agree? %>
+        <button type="button" class="btn btn-secondary" disabled>賛成</button>
+      <% else %>
+        <%= link_to theme_opinions_path(@theme, params: { opinion: { position: 'agree' }}), method: 'post' do %>
+          <button type="button" class="btn btn-danger">賛成</button>
+        <% end %>
+      <% end %>
+    </li>  
+    <li>
+      <p><%= @disagree_count %></p>
+      <% if @user_position.present? && @user_position.disagree? %>
+        <button type="button" class="btn btn-secondary" disabled>反対</button>
+      <% else %>
+        <%= link_to theme_opinions_path(@theme, params: { opinion: { position: 'disagree' }}), method: 'post' do %>
+          <button type="button" class="btn btn-primary">反対</button>
+        <% end %>
+      <% end %>
+    </li>
+    <li>
+      <p><%= @neutral_count %></p>
+      <% if @user_position.present? && @user_position.neutral? %>
+        <button type="button" class="btn btn-secondary" disabled>その他</button>
+      <% else %>
+        <%= link_to theme_opinions_path(@theme, params: { opinion: { position: 'neutral' }}), method: 'post' do %>
+          <button type="button" class="btn btn-success" >その他</button>
+        <% end %>
+      <% end %>
+    </li>
   </ul>
 </div>
 <div class="main">
