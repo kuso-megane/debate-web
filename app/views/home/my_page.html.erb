@@ -1,0 +1,45 @@
+<% if user_signed_in? %>
+
+  <h1>MyPage</h1>
+  <div class = "your_contribution" >
+    <h2>あなたの投稿テーマ</h2>
+    <% @themes.each do |theme| %>
+    　<% if theme.user = current_user%>
+        <div class="theme_box">
+          <div class="theme_image">
+            <% if theme.image.attached? %>
+              <%= image_tag theme.image if theme.user = current_user %>
+            <% else %>
+              <img src="/rings-2634929_640.png" >
+            <% end %>
+          </div>
+        </div>  
+        <h2><%= link_to theme.content, theme_opinions_path(theme.id) %></h2>
+        <div class="options align-bottom">
+          <li><button type="button" class="btn btn-danger">賛成</button></li>
+          <li><button type="button" class="btn btn-primary">反対</button></li>
+          <li><button type="button" class="btn btn-success">その他</button></li>
+        </div>
+      <% end %>
+    <% end %>  
+  </div>  
+  <div class = "your_opinion">
+    <h2>あなたの投稿意見</h2>
+    <% @opinions.each do |opinion|%>
+      <% if opinion.user == current_user %>
+      　<div class = "your_opinion_theme">
+      　 <%= opinion.theme.content %>
+      　</div>
+        <div class = "your_position">
+          <%= opinion.position %>
+        </div>
+        <div class = "your_opinion_main">
+          <%= opinion.content %>
+        </div>
+      <% end %>
+    <% end %>  
+  </div>
+  
+<% else %>
+  <h1>テーマ投稿にはログインが必要です</h1>
+<% end %>  

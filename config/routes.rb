@@ -8,5 +8,6 @@ Rails.application.routes.draw do
   get '/how_to_use' => 'home#how_to_use'
   get '/about' => 'home#about'
   get '/sample_contribution' => 'home#sample_contribution'
+  get '/my_page' => 'home#my_page'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

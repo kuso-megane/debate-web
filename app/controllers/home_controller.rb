@@ -9,4 +9,11 @@ class HomeController < ApplicationController
   def how_to_use
   end
   
+  def my_page
+   @user = current_user 
+   @themes = current_user.themes
+   @opinions = current_user.opinions.includes(:theme)
+  end  
+  
+  
 end

@@ -3,9 +3,9 @@ class OpinionsController < ApplicationController
   before_action :set_theme
   
   def index
-    @agree_opinions = Opinion.agree
-    @disagree_opinions = Opinion.disagree
-    @neutral_opinions = Opinion.neutral
+    @agree_opinions = @theme.opinions.agree
+    @disagree_opinions = @theme.opinions.disagree
+    @neutral_opinions = @theme.opinions.neutral
   end  
   
   def new
