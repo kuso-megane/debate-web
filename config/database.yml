@@ -49,6 +49,9 @@ test:
 #
 production:
   <<: *default
+  adapter: postgresql
+  encoding: unicode
+  pool: 5
   database: debate-web_production
   username: debate-web
   password: <%= ENV['DEBATE-WEB_DATABASE_PASSWORD'] %>

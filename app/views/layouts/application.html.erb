@@ -46,6 +46,10 @@
         <li><a href="/themes/new">テーマ投稿</a></li>
         <li>
           <div class="input-group">
+            <%= form_with url: root_path, method: 'get', local: true do |f| %>
+              <%= f.text_field :search %>
+              <%= f.submit '検索' %>
+            <% end %>
 	          <input type="text" class="form-control" placeholder="キーワード検索">
           	<span class="input-group-btn">
         		<button type="button" class="btn btn-default">検索</button>

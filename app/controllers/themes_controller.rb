@@ -1,6 +1,11 @@
 class ThemesController < ApplicationController
   def index
-    @themes = Theme.all
+    pp '-------index'
+    @themes = if params[:search]
+                Theme.where('content like ?', "%#{params[:search]}%")
+              else
+                Theme.all
+              end
     
   end
   
