@@ -11,8 +11,12 @@ class OpinionsController < ApplicationController
     @disagree_count = @disagree_opinions.distinct.count(:user_id)
     @neutral_count = @neutral_opinions.distinct.count(:user_id)
     
-    @user_position = current_user.opinions.find_by(theme: @theme, content: nil)
-  end  
+    @user_position = if user_signed_in? 
+                       current_user.opinions.find_by(theme: @theme, content: nil)
+                    else
+                      nil
+                    end  
+  end
   
   def new
     @opinion = Opinion.new
